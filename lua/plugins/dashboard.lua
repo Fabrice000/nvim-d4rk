@@ -1,0 +1,75 @@
+return {
+  'nvimdev/dashboard-nvim',
+  event = 'VimEnter',
+  dependencies = { 'nvim-tree/nvim-web-devicons' },
+  config = function()
+    require('dashboard').setup({
+      theme = 'doom',
+      config = {
+	      header = {
+          '',
+	  '	██████╗ ██╗  ██╗██████╗ ██╗  ██╗ ██████╗██╗  ██╗██████╗ ██╗     ',
+          '	██╔══██╗██║  ██║██╔══██╗██║ ██╔╝██╔════╝██║  ██║██╔══██╗██║     ',
+          '	██║  ██║███████║██████╔╝█████╔╝ ██║     ███████║██████╔╝██║     ',
+          '	██║  ██║╚════██║██╔══██╗██╔═██╗ ██║     ╚════██║██╔══██╗██║     ',
+          '	██████╔╝     ██║██║  ██║██║  ██╗╚██████╗     ██║██║  ██║███████╗',
+          '	╚═════╝      ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝     ╚═╝╚═╝  ╚═╝╚══════╝',
+          '',
+          '            .------------------------------------.',
+          '            |  [>_]  Don\'t learn to hack,        |',
+          '            |        hack to learn.              |',
+          '            |____________________________________|',
+          '           /  ==================================  \\',
+          '          /  ====================================  \\',
+          '         (________________________________________)',
+          '',
+        },
+        center = {
+          {
+            icon = ' ',
+            desc = 'Find File',
+            key = 'f',
+            key_format = '  %s',
+            action = 'Telescope find_files',
+          },
+          {
+            icon = ' ',
+            desc = 'Recent Files',
+            key = 'r',
+            key_format = '  %s',
+            action = 'Telescope oldfiles',
+          },
+          {
+            icon = ' ',
+            desc = 'Find Word',
+            key = 'g',
+            key_format = '  %s',
+            action = 'Telescope live_grep',
+          },
+          {
+            icon = ' ',
+            desc = 'Config',
+            key = 'c',
+            key_format = '  %s',
+            action = 'edit ~/.config/nvim-d4rk/init.lua',
+          },
+          {
+            icon = '󰒲 ',
+            desc = 'Lazy',
+            key = 'l',
+            key_format = '  %s',
+            action = 'Lazy',
+          },
+          {
+            icon = ' ',
+            desc = 'Quit',
+            key = 'q',
+            key_format = '  %s',
+            action = 'qa',
+          },
+        },
+        footer = { '', 'D4rkC4rl · Neovim' },
+      },
+    })
+  end,
+}
