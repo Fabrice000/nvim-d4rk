@@ -1,10 +1,7 @@
 local map = vim.keymap.set
 
--- Navigation entre fenêtres
-map("n", "<C-h>", "<C-w>h", { desc = "Fenêtre gauche" })
-map("n", "<C-j>", "<C-w>j", { desc = "Fenêtre basse" })
-map("n", "<C-k>", "<C-w>k", { desc = "Fenêtre haute" })
-map("n", "<C-l>", "<C-w>l", { desc = "Fenêtre droite" })
+-- Navigation entre splits gérée par vim-tmux-navigator (Ctrl-h/j/k/l),
+-- y compris pour passer d'un split Neovim à un pane tmux.
 
 -- Redimensionner les splits
 map("n", "<C-Up>", ":resize +2<CR>")
